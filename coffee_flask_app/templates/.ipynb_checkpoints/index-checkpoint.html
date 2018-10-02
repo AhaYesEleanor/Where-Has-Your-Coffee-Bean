@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Where did my coffee come from?</title>
+  <style>
+  body{
+    font-family: sans-serif;
+  }
+  .button {
+    background-color:  #6e2c00;
+    border: none;
+    color:  #fbeee6;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .animal-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 10px 10px 0px #eee;
+    width: 300px;
+    margin: auto;
+  }
+  </style>
+
+</head>
+
+<body align="center">
+
+  <h2>Enter in your coffee attribute ratings and I'll tell you what country the beans came from.</h2>
+  <form action="/coffee_origin/" method="post">
+
+    <div class="animal-card" align="center">
+
+    
+        
+      Aroma (*/10)):
+      <br>
+        <input type="text" name="aroma">
+      <br>
+      
+      Flavor (*/10):
+      <br>
+        <input type="text" name="flavor">
+      <br>
+
+      Aftertaste (*/10):
+      <br>
+        <input type="text" name="aftertaste">
+      <br>
+      
+      Acidity (*/10):
+      <br>
+      	<input type="text" name="acidity">
+      <br>
+
+      Body (*/10):
+      <br>
+        <input type="text" name="body">
+      <br>
+
+      Balance (*/10):
+      <br>
+        <input type="text" name="balance">
+      <br>
+      
+      Sweetness (*/10):
+      <br>
+        <input type="text" name="sweetness">
+      <br>
+
+    </div>
+
+  <br>
+
+  <button type="submit" class="button">
+    Where is it from?
+  </button>
+  </form>
+
+  <br>
+
+  {% if message %}
+  <h2>{{message}}</h2>
+  {% endif %}
+
+</body>
+</html>

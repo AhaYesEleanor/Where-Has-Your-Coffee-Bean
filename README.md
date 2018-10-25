@@ -44,4 +44,5 @@ Using permutation importance, I found that Balance and Flavor contributed the mo
 * prepare_data_fns.py - functions to clean and select the appropriate data subset
 
 * to_model_top_4_classes.pickle - dataset created from data preparation process, for use in modeling
+
 *coffee_flask_app* - I also created a simple flask app to showcase my model. It allows users to put in their own coffee ratings and then generates a guess of which of the 4 countries their coffee most likely came from.

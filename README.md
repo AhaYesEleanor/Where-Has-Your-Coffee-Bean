@@ -34,8 +34,11 @@ Using permutation importance, I found that Balance and Flavor contributed the mo
 
 ### Repository guide
 *initial_exploration.ipynb* - jupyter notebook documenting my data exploration process
+
 *modeling_hyperopt.ipynb* - jupyter notebook documenting the modeling process and findings, including visualizations
+
 *make_schema_a.sql* - simple schema used to import data into PostgreSQL
+
 *productionized_py_files* - a folder of modular python scripts, for replicating the process outlined in the jupyter notebooks
 * modeling_with_hyperopt.py - modeling process script, including hyperopt model selection
 * modeling_fns.py - functions used in modeling process

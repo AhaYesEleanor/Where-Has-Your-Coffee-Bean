@@ -48,7 +48,15 @@ def coffee_country(amounts_float, model=mc_model):
 
     # make a prediction
     prediction = mc_model.predict(input_df)[0]
+    probs = mc_model.predict_proba(input_df)[0] 
+    
+    countries = mc_model.classes_
+    class_weights = dict(zip(countries, probs))
+    top_prob = class_weights[prediction]
 
-    # return a message
+    # create a return message
+    out_message = "Out of Brazil, Columbia, Guatemala and Mexico, your coffee is most likely from {}".format(prediction) + ", with {0:.0f}% probability.".format(top_prob * 100) 
 
-    return "Your coffee is probably from {}!".format(prediction)
+
+
+    return out_message
